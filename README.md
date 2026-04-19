@@ -1,48 +1,79 @@
-#  Student Management REST API
+# 🎓 Student Management REST API
 
-##  Description
+## 📌 Description
 
 This project is a backend REST API built using Flask and MySQL.
-It allows users to perform CRUD operations on student data.
+It supports CRUD operations and includes JWT-based authentication for secure access.
 
 ---
 
-##  Tech Stack
+## ⚙️ Tech Stack
 
 * Python (Flask)
 * MySQL
 * Flask-MySQLdb
+* JWT Authentication
 
 ---
 
-##  Features
+## 🚀 Features
 
 * Add Student (POST)
-* Get All Students (GET)
+* Get Students (GET) 🔒 Protected
 * Update Student (PUT)
 * Delete Student (DELETE)
+* User Registration
+* User Login
+* JWT Token-based Authentication
 
 ---
 
-##  API Endpoints
+## 🔗 API Endpoints
+
+### 🔐 Authentication
+
+* POST /register
+* POST /login
+
+### 📚 Student APIs
 
 * POST /add_student
-* GET /students
+* GET /students  (Protected)
 * PUT /update_student/<id>
 * DELETE /delete_student/<id>
 
 ---
 
-##  How to Run
+## 🔑 Authentication Flow
+
+1. Register user
+2. Login → Get JWT token
+3. Add token in header:
+   Authorization: <your_token>
+4. Access protected APIs
+
+---
+
+## ▶️ How to Run
 
 1. Clone repository
-2. Install dependencies
-   pip install flask flask-mysqldb flask-cors
-3. Run project
+2. Install dependencies:
+   pip install flask flask-mysqldb PyJWT
+3. Run:
    python app.py
 
 ---
 
-##  Author
+## 📊 Database
+
+* Database: student_db
+* Tables:
+
+  * students
+  * users
+
+---
+
+## 👨‍💻 Author
 
 Chiranth G H 
